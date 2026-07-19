@@ -1,0 +1,22 @@
+#now we will add the columns in the existing dataset
+
+import pandas as pd
+
+data={
+    "Name":['Saurav Shukla','ram manohar', 'mahatma gandhi','raj','simaran','ghanshyam','aditi','atharvi'],
+    "Age":[21,22,157,23,21,78,34,56],
+    "salary":[10000,50000,40000,780000,1000000,340000,56000,41000],
+    "performance score":[80,56,78,34,56,76,55,65]
+}
+df=pd.DataFrame(data)
+
+
+#ek column add karo bonus naam ka jisme har ek bande ke salary ka 10 percent salary ho 
+
+df["Bonus"]=df["salary"]*0.1 
+print(df)       #this is the manual method of adding column 
+
+
+#ek column add karo employee_id ke naam se jisme unki id ho with the help of insert method 
+df.insert(0,"emp_id",[10,20,30,40,50,60,70,80])
+print(df)
