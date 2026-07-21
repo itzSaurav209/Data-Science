@@ -8,7 +8,8 @@ data={
 }
 df=pd.DataFrame(data)
 print (df)
-
+#here we are removing the values 
 df.dropna(inplace=True)# tum yaha pe axis=0 aur 1 bhi rakh sakte ho , sirf inplace rakhne se rows aur columns dono delete ho jaa rhi hai jo values missing hai 
 print(df)
 #hamne upar dataset ke second index pe har jagah none likh diya hai taki jab dropna() vala method chale to second index ki sari values delete ho jaye 
+
