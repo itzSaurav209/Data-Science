@@ -9,12 +9,7 @@ data={
 df=pd.DataFrame(data)
 print (df)
 
-#update using .loc[] function
-
-df.loc[0,'salary']=50000 #agar hame specific bande ki salary update karn hai to ham .loc ka use karenge 
+#now we are going to delete the column using drop method 
+print ('after deleting the column')
+df.drop(columns=["Age"],inplace=True)
 print(df)
-
-
-# Ques2)now we want to increase salary of each index with the rate of 5%
-df['salary']=df['salary']*0.5
-print(df)  #agar hame poore column ki salary update karni hai to ham ye method use karenge 
